@@ -1,0 +1,72 @@
+[
+	{
+	    "id": 10,
+		"title": "Chinese Food",
+		"artist": "Alison Gold",
+		"label": "PMW Live",
+		"released": 2013
+	},
+	{
+		"id": 9,
+		"title": "My Humps",
+		"artist": "Black Eyed Peas",
+		"label": "Universal Music",
+		"released": 2005
+	},
+	{
+		"id": 8,
+		"title": "Who Let the Dogs Out?",
+		"artist": "Baha Men",
+		"label": "S-Curve",
+		"released": 2000
+	},
+	{
+		"id": 7,
+		"title": "What’s Up?",
+		"artist": "4 Non Blondes",
+		"label": "Interscope",
+		"released": 1993
+	},
+	{
+		"id": 6,
+		"title": "Achy Breaky Heart",
+		"artist": "Billy Ray Cyrus",
+		"label": "PolyGram Mercury",
+		"released": 1992
+	},
+	{
+		"id": 5,
+		"title": "We Built This City",
+		"artist": "Starship",
+		"label": "Grunt/RCA",
+		"released": 1985
+	},
+	{
+		"id": 4,
+		"title": "Sussudio",
+		"artist": "Phil Collins",
+		"label": "Virgin",
+		"released": 1985
+	},
+	{
+		"id": 3,
+		"title": "Muskrat Love",
+		"artist": "Captain and Tennille",
+		"label": "A&M",
+		"released": 1976
+	},
+	{
+		"id": 2,
+		"title": "Afternoon Delight",
+		"artist": "Starland Vocal Band",
+		"label": "Windsong",
+		"released": 1976
+	},
+	{
+		"id": 1,
+		"title": "MacArthur Park",
+		"artist": "Richard Harris",
+		"label": "Dunhill Records",
+		"released": 1968
+	}
+]

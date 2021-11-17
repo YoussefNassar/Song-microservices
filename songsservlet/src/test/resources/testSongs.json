@@ -1,0 +1,30 @@
+[
+	{
+		"id": 4,
+		"title": "Ghostbusters (I'm not a fraid)",
+		"artist": "Fall Out Boy, Missy Elliott",
+		"label": "Virgin",
+		"released": 2016
+	},
+	{
+		"id": 3,
+		"title": "Team",
+		"artist": "Iggy Azalea",
+		"label": "Virgin",
+		"released": 2016
+	},
+	{
+		"id": 2,
+		"title": "Mom",
+		"artist": "Meghan Trainor, Kelli Trainor",
+		"label": "Virgin",
+		"released": 2016
+	},
+	{
+		"id": 1,
+		"title": "Can’t Stop the Feeling",
+		"artist": "Justin Timberlake",
+		"label": "Virgin",
+		"released": 2016
+	}
+]

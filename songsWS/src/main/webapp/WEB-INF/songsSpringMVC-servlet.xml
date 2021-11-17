@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+    <!--  explicit support for annotation-driven MVC controllers 
+         e.g., @RequestMapping, @Controller -->
+    <mvc:annotation-driven />
+    
+    <!-- enable auto scanning feature: 
+         base-package: package, wo sich die Controller befinden. 
+         Spring wird dieses Vezeichnis scannen und die Beans, 
+         die, z.B., mit @RestController annotiert sind, finden und registrieren. -->
+    <context:component-scan base-package="htwb.ai"/>
+
+    <!--    https://www.baeldung.com/constructor-injection-in-spring-->
+    <bean id="songDAO" class="htwb.ai.dao.DBSongDAO">
+        <constructor-arg value="songDB-PU"/>
+    </bean>
+
+    <bean id="songsListDAO" class="htwb.ai.dao.DBSongListDAO">
+        <constructor-arg value="songDB-PU"/>
+    </bean>
+
+    <bean id="userDAO" class="htwb.ai.dao.DBUserDAO">
+        <constructor-arg value="songDB-PU"/>
+    </bean>
+
+    <!-- Wir nutzen Jackson: -->
+    <bean id="jsonMessageConverter"
+        class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />   
+</beans>

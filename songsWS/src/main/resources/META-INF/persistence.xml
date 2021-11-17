@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="songDB-PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>htwb.ai.model.Song</class>
+        <class>htwb.ai.model.User</class>
+        <class>htwb.ai.model.SongList</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://IP:3306/beleg3"/>
+            <property name="javax.persistence.jdbc.user" value="USER_NAME"/>
+            <property name="javax.persistence.jdbc.password" value="PASS_WORD"/>
+
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.release_mode" value="after_statement"/>
+
+            <!-- Connection pool properties -->
+            <property name="hibernate.c3p0.min_size" value="1"/>
+            <property name="hibernate.c3p0.max_size" value="8"/>
+
+            <!-- in seconds:  When an idle connection is removed from the pool
+                 Hibernate default: 0, never expire. -->
+            <property name="hibernate.c3p0.timeout" value="1800"/>
+
+            <!--  Number of prepared statements that will be cached.
+                  Hibernate default: 0 , caching is disable. -->
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="songDB-PU-tests" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>htwb.ai.model.Song</class>
+        <class>htwb.ai.model.User</class>
+        <class>htwb.ai.model.SongList</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://IP:3306/beleg3_test?useSSL=false"/>
+            <property name="javax.persistence.jdbc.user" value="USER_NAME"/>
+            <property name="javax.persistence.jdbc.password" value="PASS_WORD"/>
+
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.release_mode" value="after_statement"/>
+
+            <!-- Connection pool properties -->
+            <property name="hibernate.c3p0.min_size" value="1"/>
+            <property name="hibernate.c3p0.max_size" value="8"/>
+
+            <!-- in seconds:  When an idle connection is removed from the pool
+                 Hibernate default: 0, never expire. -->
+            <property name="hibernate.c3p0.timeout" value="1800"/>
+
+            <!--  Number of prepared statements that will be cached.
+                  Hibernate default: 0 , caching is disable. -->
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+        </properties>
+    </persistence-unit>
+</persistence>
